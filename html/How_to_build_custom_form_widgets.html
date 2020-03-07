@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How_to_build_custom_form_widgets</title>
+</head>
+<style type="text/css">
+	.select {
+		font-size: 0.625em;
+		font-family: Verdana, Arial, sans-serif;
+
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		 /* 我们需要为将要添加的向下箭头准备一些额外的空间 */
+		padding : .1em 2.5em .2em .5em; /* 1px 25px 2px 5px */
+		width   : 10em; /* 100px */
+
+		border        : .2em solid #000; /* 2px */
+		border-radius : .4em; /* 4px */
+		box-shadow    : 0 .1em .2em rgba(0,0,0,.45); /* 0 1px 2px */
+		  
+		  /* 第一段声明是为了不支持线性梯度填充的浏览器准备的。
+		     第二段声明是因为基于WebKit的浏览器没有预先定义它。
+		     如果你想为过时的浏览器提供支持, 请参阅 http://www.colorzilla.com/gradient-editor/ */
+		background : #F0F0F0;
+		background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+		background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+	}
+	.select .value {
+		display: inline-block;
+		width: 100%;
+		overflow: hidden;
+
+		vertical-align: top;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+</style>
+<body>
+	<div class="select" tabindex="0">
+		<span class="value">Cherry</span>
+		<ul class="optList">
+			<li class="option">Cherry</li>
+			<li class="option">Lemon</li>
+			<li class="option">Banana</li>
+			<li class="option">Strawberry</li>
+			<li class="option">Apple</li>
+		</ul>
+	</div>
+
+</body>
+</html>

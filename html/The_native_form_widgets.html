@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The_native_form_widgets</title>
+</head>
+<body>
+
+
+	<select id="simple" name="simple">
+		<option>Banana</option>
+		<option>Cherry</option>
+		<option>Lemon</option>
+	</select>
+
+	<select id="group" name="group">
+		<optgroup label="fruits">
+			<option>Banana</option>
+			<option selected>Cherry</option>
+			<option>Lemon</option>
+		</optgroup>
+		<optgroup label="vegetables">
+			<option>Carrot</option>
+			<option>Eggplant</option>
+			<option>Potato</option>
+		</optgroup>
+	</select>
+
+	<div>
+		<h2>Auto-Completion</h2>
+		<div>
+			<label for="myFurit">What's your favorite fruit?</label>
+		</div>
+		<input type="text" name="myFurit" id="myFurit" list="mySuggetion">
+		<datalist id="mySuggetion">
+			<option>Apple</option>
+			<option>Banana</option>
+			<option>Blackberry</option>
+			<option>BlueBerry</option>
+			<option>Lemon</option>
+			<option>Lychee</option>
+			<option>Peach</option>
+			<option>Pear</option>
+		</datalist>
+
+		<div>
+			<label for="myFurit">What's your favorite fruit? (With fallback)</label>
+		</div>
+		<input type="text" name="myFurit" id="myFurit" list="mySuggetion">
+		<datalist id="fruitList">
+			<label for="suggetion">or pick a fruit</label>
+			<select id="suggetion" name="altFruit">
+				<option>Apple</option>
+				<option>Banana</option>
+				<option>Blackberry</option>
+				<option>BlueBerry</option>
+				<option>Lemon</option>
+				<option>Lychee</option>
+				<option>Peach</option>
+				<option>Pear</option>
+			</select>
+		</datalist>
+
+		<fieldset>
+			<legend>What is your favorite meal?</legend>
+			<ul>
+				<li>
+					<label for="soup">Soup</label>
+					<input type="radio" checked id="soup" name="meal" value="soup">
+				</li>
+				<li>
+					<label for="curry">Soup</label>
+					<input type="radio" id="curry" name="meal" value="curry">
+				</li>
+				<li>
+					<label for="soup">Pizza</label>
+					<input type="radio" id="pizza" name="meal" value="pizza">
+				</li>
+			</ul>
+			<button type="submit">
+				This a <br><strong>submit button</strong>
+			</button>
+			<input type="submit" name="" value="This is a submit button">
+		</fieldset>
+
+	</div>
+
+</body>
+</html>
